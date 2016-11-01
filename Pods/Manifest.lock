@@ -14,13 +14,22 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HexColors (2.2.1)
+  - MJRefresh (3.1.10)
+  - TSMessages (0.9.12):
+    - HexColors (~> 2.2.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - MJRefresh
+  - TSMessages
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: 0b7396f9f504e359b6e3e5e704f5de4e5fe935d9
+PODFILE CHECKSUM: 732df1a38294434cf7b2cbc31c5d9cd09d4c5ad7
 
 COCOAPODS: 1.0.1

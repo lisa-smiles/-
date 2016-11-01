@@ -11,6 +11,9 @@
 #import "NetworkingManager.h"
 #import "LocationManager.h"
 #import "TemperatureData.h"
+#import "TSMessage.h"
+#import "DailyTableViewController.h"
+
 @interface MainViewController ()
 
 @property (nonatomic, strong) CLLocation *userlocation;
@@ -25,19 +28,43 @@
 
 @implementation MainViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    
-    
-    [self listenNotification];
-}
 - (CLGeocoder *)geocoder {
     if (!_geocoder) {
         _geocoder = [CLGeocoder new];
     }
     return _geocoder;
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self listenNotification];
+    [self getLocation];
+    [self recognizerDirectionLeft];
+}
+- (void)recognizerDirectionLeft {
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeFrom)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.view addGestureRecognizer:recognizer];
+    
+}
+
+- (void)handleSwipeFrom {
+    DailyTableViewController *ViewController = [[DailyTableViewController alloc] init];
+    [self presentViewController:ViewController animated:YES completion:nil];
+}
+
+
+//- (void)addMJRefreshControl {
+//
+//    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(sendRequestToSever)];
+//    // 隐藏时间
+//    NSLog(@"kaishishuaxin");
+//    header.lastUpdatedTimeLabel.hidden = YES;
+//    // 马上进入刷新状态
+//    [header beginRefreshing];
+//
+//}
+
 - (void)listenNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeCity:) name:@"DidCityChange" object:nil];
 }
@@ -73,13 +100,15 @@
 }
 
 - (void)sendRequestToSever {
+    [TSMessage setDefaultViewController:self];
 
     [NetworkingManager sendGetRequestWithUrl:self.urlStr Withparameters:nil WithSuccessBlock:^(id responseObject) {
         
         [self parseAndUpdate:responseObject];
         
     } withFailuerBlock:^(NSError *err) {
-        
+//      [TSMessage showNotificationWithTitle:@"可能网络太慢" subtitle:@"请稍后再试" type:TSMessageNotificationTypeWarning];
+        [TSMessage showNotificationWithTitle:@"网络出现问题请稍后再试" type:TSMessageNotificationTypeError];
     }];
 }
 
@@ -91,6 +120,7 @@
                 CLPlacemark *placemark = [placemarks firstObject];
                 self.cityNameLabel.text = placemark.addressDictionary[@"City"];
             }
+            
         }];
     }
     self.weatherConditionsLabel.text = tempData.weatherDesc;

@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-天气预报.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C3C59C7E1CFE5EBBF35BAAF8F55A6D9</key>
+		<key>70BC44266C6FFE30D2C57129458E070B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B95B05A8F00FD2ADCE90839943D1AE19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C946979D6BA458BCE66643EFEF550122</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9EF397B95762DDB254C71DDCB4B1381</key>
 		<dict>
 			<key>primary</key>
 			<true/>

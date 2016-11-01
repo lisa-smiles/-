@@ -14,4 +14,5 @@ typedef void(^saveLocationBlock)(double lat, double lon);
 
 + (void)getUserLocation:(void(^)(double lat, double lon))locationBlock;
 
+
 @end

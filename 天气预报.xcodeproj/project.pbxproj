@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421FBEC91DC8849400B5D2F3 /* DailyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421FBEC81DC8849400B5D2F3 /* DailyTableViewController.m */; };
 		42628C331DBA00740088257D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42628C321DBA00740088257D /* main.m */; };
 		42628C361DBA00740088257D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42628C351DBA00740088257D /* AppDelegate.m */; };
 		42628C3E1DBA00740088257D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42628C3D1DBA00740088257D /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		0F46436175F7D14BED1958E0 /* Pods-天气预报.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-天气预报.release.xcconfig"; path = "Pods/Target Support Files/Pods-天气预报/Pods-天气预报.release.xcconfig"; sourceTree = "<group>"; };
 		3D067C314302DFEB17D20110 /* libPods-天气预报.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-天气预报.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		421FBEC71DC8849400B5D2F3 /* DailyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyTableViewController.h; sourceTree = "<group>"; };
+		421FBEC81DC8849400B5D2F3 /* DailyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyTableViewController.m; sourceTree = "<group>"; };
 		42628C2E1DBA00740088257D /* 天气预报.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "天气预报.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42628C321DBA00740088257D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42628C341DBA00740088257D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				42628C4A1DBA00EC0088257D /* CitiesTableViewController.h */,
 				42628C4B1DBA00EC0088257D /* CitiesTableViewController.m */,
+				421FBEC71DC8849400B5D2F3 /* DailyTableViewController.h */,
+				421FBEC81DC8849400B5D2F3 /* DailyTableViewController.m */,
 				42628C4C1DBA00EC0088257D /* MainViewController.h */,
 				42628C4D1DBA00EC0088257D /* MainViewController.m */,
 			);
@@ -309,6 +314,7 @@
 				42628C561DBA03080088257D /* DataManager.m in Sources */,
 				42628C331DBA00740088257D /* main.m in Sources */,
 				42628C531DBA01D90088257D /* CityGroups.m in Sources */,
+				421FBEC91DC8849400B5D2F3 /* DailyTableViewController.m in Sources */,
 				42628C881DBB05130088257D /* LocationManager.m in Sources */,
 				42628C4E1DBA00EC0088257D /* CitiesTableViewController.m in Sources */,
 				42628C4F1DBA00EC0088257D /* MainViewController.m in Sources */,

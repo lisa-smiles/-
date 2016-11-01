@@ -12,15 +12,18 @@
 @interface LocationManager()<CLLocationManagerDelegate>
 @property(nonatomic, strong) CLLocationManager *manager;
 @property(nonatomic, copy) void(^saveLocation)(double lat, double lon);
+//@property (nonatomic, strong) CLLocation *userLocation;
+//@property (nonatomic, strong) CLGeocoder *geocoder;
+
 
 @end
 @implementation LocationManager
 
 //一个类的唯一一个实例对象
-+ (id)sharedLocationManager {
++ (id)sharedLoationManager {
     static LocationManager *locationManager = nil;
     if (!locationManager) {
-        locationManager = [[LocationManager alloc]init];
+        locationManager = [[LocationManager alloc] init];
     }
     return locationManager;
 }
@@ -37,7 +40,7 @@
 }
 
 + (void)getUserLocation:(void (^)(double, double))locationBlock {
-    LocationManager *locationManager = [LocationManager sharedLocationManager];
+    LocationManager *locationManager = [LocationManager sharedLoationManager];
     [locationManager getUserLocations:locationBlock];
 }
 
@@ -56,4 +59,5 @@
     CLLocation *location = [locations lastObject];
     _saveLocation(location.coordinate.latitude, location.coordinate.longitude);
 }
+
 @end
